@@ -4,7 +4,7 @@ MAINTAINER Sengorius <mail@skript-manufaktur.de>
 
 # https://mailcatcher.me/
 # https://rubygems.org/gems/mailcatcher/versions
-ENV MAILCATCHER_VERSION=0.8.1
+ENV MAILCATCHER_VERSION=0.8.2
 
 RUN apk add --no-cache \
     ca-certificates openssl sqlite-libs \
