@@ -1,14 +1,17 @@
 FROM alpine:latest
 
-MAINTAINER Sengorius <mail@skript-manufaktur.de>
+LABEL org.opencontainers.image.authors="Sengorius <mail@skript-manufaktur.de>, Samuel Cochran <sj26@sj26.com>"
+LABEL org.opencontainers.image.vendor="Skript-Manufaktur"
+LABEL org.opencontainers.image.source="https://github.com/Sengorius/proxy-mailcatcher"
+LABEL org.opencontainers.image.title="Proxy-Mailcatcher"
 
 # https://mailcatcher.me/
 # https://rubygems.org/gems/mailcatcher/versions
-ENV MAILCATCHER_VERSION=0.8.2
+ENV MAILCATCHER_VERSION=0.10.0
 
 RUN apk add --no-cache \
     ca-certificates openssl sqlite-libs \
-    ruby ruby-bigdecimal ruby-etc ruby-json libstdc++
+    ruby ruby-bigdecimal libstdc++
 
 RUN apk add --no-cache --virtual .build-deps \
     ruby-dev make g++ sqlite-dev && \
