@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.title="Proxy-Mailcatcher"
 
 # https://mailcatcher.me/
 # https://rubygems.org/gems/mailcatcher/versions
-ENV MAILCATCHER_VERSION=0.10.0
+ENV MAILCATCHER_VERSION=0.11.0
 
 RUN apk add --no-cache \
     ca-certificates openssl sqlite-libs \
